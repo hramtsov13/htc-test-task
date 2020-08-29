@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title>HR13 Agency</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">HR13 Agency</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon burger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/cv.html">Резюме</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <button class="button my-2 my-sm-0" type="button">Войти / Регистрация</button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="swup" class="transition-fade">
+      <section class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="main">
+              <div class="main__text animate__animated animate__fadeInLeft">
+                <p class="text__item">
+                  Михаил Храмцов
+                </p>
+                <h1 class="text__item">
+                  Frontend developer / Верстальщик
+                </h1>
+              </div>
+              <div class="main__image animate__animated animate__fadeInRight">
+                <div class="image"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="facts" id="facts ">
+              <h2 class="header">
+                Интересные факты
+                <span class="slider__arrow"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="facts__slider">
+              <div class="slider__item">
+                <img class="slider__image" data-lazy="./img/main/1.jpeg" alt="Опыт работы" />
+                <div class="description">
+                  <h3>1 год</h3>
+                  <p>В верстке и Frontend</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <img class="slider__image" data-lazy="./img/main/2.jpeg" alt="Знание языков" />
+                <div class="description">
+                  <h3>3 языка</h3>
+                  <p>Английский, немецкий, русский</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <img class="slider__image" data-lazy="./img/main/3.jpeg" alt="Международный опыт" />
+                <div class="description">
+                  <h3>~1 год</h3>
+                  <p>Интернационального опыта работы в Германии</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="footer__contacts">
+              <p>Есть идея?</p>
+              <span>Позвоните: <a class="footer__tel" href="tel:+7(999)587-67-67">+7 (999) 587-67-67</a></span>
+              <span>Напишите: <a class="footer__mail" href="mailto:mikhail@hr13.ru"> mikhail@hr13.ru</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/scripts.min.js"></script>
+  </body>
+</html>
