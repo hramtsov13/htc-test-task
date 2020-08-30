@@ -153,6 +153,8 @@ body {
   }
 }
 
+//index-movies
+
 .movie__new {
   margin-bottom: 32px;
 
@@ -309,6 +311,69 @@ body {
     }
   }
 }
+
+//index-channels
+
+.channels {
+  margin-top: 27px;
+
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: scroll;
+
+
+  .channel {
+    margin-bottom: 16px;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F2F2F2;
+    border-radius: 8px;
+
+    .channel__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 33.333%;
+    }
+
+    .channel__schedule {
+      display: flex;
+      flex-direction: column;
+
+      .channel__name {
+        margin-bottom: 17px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .schedule {
+        display: flex;
+        flex-direction: column;
+
+        .schedule__item {
+          margin-bottom: 12px;
+          display: flex;
+          flex-direction: row;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .schedule__time {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+//footer
 
 .footer {
   width: 100%;

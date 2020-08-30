@@ -5,26 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
     <title>HR13 –– Портфолио</title>
   </head>
 
   <body>
-    <main id="swup" class="transition-fade">
-      <section class="container">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="header cv__header">Резюме</h2>
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="header__logo">
+            <img src="img/header/logo.svg" class="logo__image" />
+            <h1 class="logo__name">Видеосервис</h1>
+          </div>
+
+          <form class="header__search" action="" method="get">
+            <input class="search__input" name="search" id="search" placeholder="Поиск..." type="search" />
+            <button class="search__button" type="submit">Найти</button>
+          </form>
+
+          <div class="header__login">
+            <button class="login__button">Войти</button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="cv__info">
-              <p>Страница еще в разработке</p>
-              <a class="cv__button button" href="/index.html">На главную</a>
+      </div>
+    </header>
+
+    <div class="section">
+      <div class="wrapper">
+        <div class="nav">
+          <a class="nav__movie" href="index.html">Фильмы</a>
+          <a class="nav__tv" href="index-channels.html">Телеканалы</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="swup">
+      <div class="wrapper">
+        <section class="channels">
+          <div class="channel">
+            <div class="channel__logo">
+              <img src="img/index-channels/first.png" alt="Первый канал" />
+            </div>
+            <div class="channel__schedule">
+              <h3 class="channel__name">Первый канал</h3>
+              <ul class="schedule">
+                <li class="schedule__item">
+                  <div class="schedule__time">13:00</div>
+                  <div class="schedule__broadcast-name">Новости(с субтитрами)</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">14:00</div>
+                  <div class="schedule__broadcast-name">Давай поженимся</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">15:00</div>
+                  <div class="schedule__broadcast-name">Другие новости</div>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
+          <div class="channel">
+            <div class="channel__logo">
+              <img src="img/index-channels/2x2.png" alt="Первый канал" />
+            </div>
+            <div class="channel__schedule">
+              <h3 class="channel__name">2x2</h3>
+              <ul class="schedule">
+                <li class="schedule__item">
+                  <div class="schedule__time">13:00</div>
+                  <div class="schedule__broadcast-name">МУЛЬТ ТВ. Сезон 4, 7 серия</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">14:00</div>
+                  <div class="schedule__broadcast-name">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">15:00</div>
+                  <div class="schedule__broadcast-name">БУРДАШЕВ. Сезон 1, 20 серия</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel">
+            <div class="channel__logo">
+              <img src="img/index-channels/rbk.png" alt="Первый канал" />
+            </div>
+            <div class="channel__schedule">
+              <h3 class="channel__name">РБК</h3>
+              <ul class="schedule">
+                <li class="schedule__item">
+                  <div class="schedule__time">13:00</div>
+                  <div class="schedule__broadcast-name">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">14:00</div>
+                  <div class="schedule__broadcast-name">ДЕНЬ. Главные темы</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">15:00</div>
+                  <div class="schedule__broadcast-name">Главные новости</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel">
+            <div class="channel__logo">
+              <img src="img/index-channels/Amedia.png" alt="Первый канал" />
+            </div>
+            <div class="channel__schedule">
+              <h3 class="channel__name">AMEDIA PREMIUM</h3>
+              <ul class="schedule">
+                <li class="schedule__item">
+                  <div class="schedule__time">13:00</div>
+                  <div class="schedule__broadcast-name">Клиент всегда мёртв</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">14:00</div>
+                  <div class="schedule__broadcast-name">Голодные игры: Сойка-пересмешница. Часть I</div>
+                </li>
+                <li class="schedule__item">
+                  <div class="schedule__time">15:00</div>
+                  <div class="schedule__broadcast-name">Секс в большом городе</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>

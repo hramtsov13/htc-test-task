@@ -39,6 +39,7 @@ const compileScript = () => {
   return gulp
     .src([
       // here add js libs
+      "app/libs/jquery-3.5.1.min.js",
       "app/libs/swup.min.js",
       "app/js/script.js",
     ])
