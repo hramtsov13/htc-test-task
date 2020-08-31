@@ -119,39 +119,7 @@ body {
   }
 }
 
-.section {
-  margin-bottom: 32px;
 
-  .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    font-weight: 500;
-    color: #333333;
-
-    .nav__movie,
-    .nav__tv {
-      text-decoration: none;
-      color: #333333;
-
-      &:hover {
-        color: #E5261E;
-      }
-
-      &:active {
-        padding-bottom: 9px;
-        border-bottom: 2px solid #E5261E;
-      }
-    }
-
-    .nav__movie {
-      margin-right: 24px;
-    }
-
-    .nav__tv {}
-  }
-}
 
 //index-movies
 
@@ -316,10 +284,8 @@ body {
 
 .channels {
   margin-top: 27px;
-
   display: flex;
   flex-direction: column;
-  height: 75vh;
   overflow: scroll;
 
 
@@ -359,6 +325,11 @@ body {
           display: flex;
           flex-direction: row;
 
+          &:first-child {
+            color: #E5261E;
+          }
+
+
           &:last-child {
             margin-bottom: 0;
           }
@@ -369,7 +340,6 @@ body {
         }
       }
     }
-
   }
 }
 
@@ -502,4 +472,23 @@ body {
       }
     }
   }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-nav {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.is-active {
+  display: block;
 }
