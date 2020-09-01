@@ -23,27 +23,31 @@
           </form>
 
           <div class="header__login">
-            <button id="login-button" class="login__button">Войти</button>
+            <button id="login-button" class="button">Войти</button>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="modal-login">
-      <div class="wrapper">
-        <div class="login">
-          <form action="login.js">
-            <h2 class="login__header">Вход</h2>
-            <div class="login__item">
-              <input class="login__input" type="email" name="email" id="email" required />
-              <label for="email">Логин</label>
-            </div>
-            <div class="login__item">
-              <input class="login__input" type="password" name="password" id="password" required />
-              <label for="password">Пароль</label>
-            </div>
-          </form>
-        </div>
+    <section id="modal-login" class="modal__login">
+      <div class="login">
+        <form class="login__form" id="login-form">
+          <h2 class="login__header">Вход</h2>
+          <div class="login__item">
+            <input class="login__input" placeholder="Логин" type="text" name="text" id="login-text" required />
+          </div>
+          <div class="login__item">
+            <input class="login__input" placeholder="Пароль" type="password" name="password" id="login-password" required />
+          </div>
+          <div class="login__item">
+            <label class="checkbox"
+              ><input class="checkbox__input" type="checkbox" name="checkbox" />
+              <span class="checkbox__fake"></span>
+              <span class="checkbox__agreement"> Запомнить</span>
+            </label>
+          </div>
+          <button class="button login__button" onclick="getInputValue();">Войти</button>
+        </form>
       </div>
     </section>
 

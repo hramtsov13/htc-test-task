@@ -15,6 +15,21 @@ body {
   margin: 0 130px;
 }
 
+.button {
+  padding: 9px 32px 10px;
+  font-weight: 600;
+  background: #E5261E;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+
+
+  &:hover {
+    background: #CC221B;
+    cursor: pointer;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -99,25 +114,126 @@ body {
       cursor: pointer;
     }
   }
+}
 
-  .header__login {
+//modal-login
 
-    .login__button {
-      padding: 9px 32px 10px;
-      font-weight: 600;
-      background: #E5261E;
-      border: none;
-      border-radius: 4px;
-      color: #ffffff;
+.modal__login {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(51, 51, 51, 0.6);
 
 
-      &:hover {
-        background: #CC221B;
+  .login {
+    margin: 25% auto;
+    width: 300px;
+    height: 400px;
+    transform: translateY(-50%);
+
+    .login__form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 36px 32px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+
+
+    .login__header {
+      align-self: center;
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    .login__item {
+      margin-bottom: 24px;
+
+
+      .login__input {
+        padding-bottom: 6px;
+        width: 232px;
+        border: none;
+        border-bottom: 1px solid #333333;
+        background-color: #ffffff;
+        color: #333333;
+        font-weight: 500;
+        outline: none;
+        -webkit-appearance: none;
+
+        &::-webkit-input-placeholder {
+          color: #828282;
+        }
+
+        &::-moz-placeholder {
+          color: #828282;
+        }
+
+        &:-ms-input-placeholder {
+          color: #828282;
+        }
+
+        &:-moz-placeholder {
+          color: #828282;
+        }
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 80%;
         cursor: pointer;
       }
+
+      .checkbox__input {
+        display: none;
+      }
+
+      .checkbox__fake {
+        margin-right: 8px;
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border: 1px solid #333333;
+        border-radius: 4px;
+      }
+
+      .checkbox__fake:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 8px;
+        background-image: url("./../img/checkbox/checked.svg");
+        background-position: center;
+        opacity: 0;
+        transition: opacity .2s;
+      }
+
+      .checkbox__input:checked+.checkbox__fake::before {
+        opacity: 1;
+      }
+    }
+
+    .login__button {
+      align-self: center;
     }
   }
 }
+
 
 //tabs 
 
