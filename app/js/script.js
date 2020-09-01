@@ -1,5 +1,5 @@
 let tab = function () {
-  let tabNav = document.querySelectorAll(".tabs-nav__item");
+  let tabNav = document.querySelectorAll(".nav__item");
   let tabContent = document.querySelectorAll(".tab");
   let tabName;
 
@@ -24,3 +24,5 @@ let tab = function () {
 };
 
 tab();
+
+//modal login window
