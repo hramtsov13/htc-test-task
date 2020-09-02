@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.min.css" />
     <title>Видеосервис</title>
   </head>
@@ -13,7 +13,7 @@
       <div class="wrapper">
         <div class="header">
           <div class="header__logo">
-            <img src="img/header/logo.svg" class="logo__image" />
+            <img src="img/header/logo.svg" class="logo__image" alt="Видеосервис" />
             <h1 class="logo__name">Видеосервис</h1>
           </div>
 
@@ -23,7 +23,9 @@
           </form>
 
           <div class="header__login">
+            <span class="login__user" id="user-name"></span>
             <button id="login-button" class="button">Войти</button>
+            <button id="button-logout" class="button button__logout button__hidden">Выйти</button>
           </div>
         </div>
       </div>
@@ -41,17 +43,17 @@
           </div>
           <div class="login__item">
             <label class="checkbox"
-              ><input class="checkbox__input" type="checkbox" name="checkbox" />
+              ><input class="checkbox__input" id="checkbox" type="checkbox" name="checkbox" />
               <span class="checkbox__fake"></span>
               <span class="checkbox__agreement"> Запомнить</span>
             </label>
           </div>
-          <button class="button login__button" onclick="getInputValue();">Войти</button>
+          <button id="login-check" class="button login__button">Войти</button>
         </form>
       </div>
     </section>
 
-    <div class="tabs">
+    <main class="tabs">
       <div class="wrapper">
         <div class="tabs__nav tabs-nav">
           <button class="is-active nav__item" data-tab-name="index-movies">Фильмы</button>
@@ -60,9 +62,9 @@
       </div>
       <div class="tabs__content">
         <div class="tab is-active index-movies">
-          <main>
+          <section>
             <div class="wrapper">
-              <section class="movie__new">
+              <article class="movie__new">
                 <h2 class="new__header">🔥 Новинки</h2>
                 <div class="new__wrapper">
                   <div class="movie__card">
@@ -118,9 +120,9 @@
                     <h3 class="card__name">Стриптизёрши</h3>
                   </div>
                 </div>
-              </section>
+              </article>
 
-              <section class="genre">
+              <article class="genre">
                 <h2 class="genre__header">Жанры</h2>
                 <div class="genre__wrapper">
                   <div class="genre__item">
@@ -140,14 +142,14 @@
                     <h3 class="item__name">Ужасы</h3>
                   </div>
                 </div>
-              </section>
+              </article>
             </div>
-          </main>
+          </section>
         </div>
         <div class="tab index-channels">
-          <main>
+          <section>
             <div class="wrapper">
-              <section class="channels">
+              <article class="channels">
                 <div class="channel">
                   <div class="channel__logo">
                     <img src="img/index-channels/first.svg" alt="Первый канал" />
@@ -324,24 +326,24 @@
                     </ul>
                   </div>
                 </div>
-              </section>
+              </article>
             </div>
-          </main>
+          </section>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__wrapper">
           <div class="footer__logo">
-            <img src="img/footer/footer.png" alt="Логотип" />
+            <img src="img/footer/footer.svg" alt="Логотип" />
           </div>
           <div class="footer__contacts">
             <span class="contacts__address"
               >426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</span
             >
-            <a class="contacts__phone" href="tel+73412938861">+7 (3412) 93-88-61, 43-29-29</a>
+            <a class="contacts__phone" href="tel:+73412938861">+7 (3412) 93-88-61, 43-29-29</a>
             <a class="contacts__website" href="https://htc-cs.ru" target="_blank">htc-cs.ru</a>
           </div>
         </div>

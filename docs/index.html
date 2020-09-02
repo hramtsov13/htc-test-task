@@ -4,120 +4,351 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <title>HR13 Agency</title>
+    <title>Видеосервис</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-md">
-      <div class="container">
-        <a class="navbar-brand" href="/index.html">HR13 Agency</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon burger-icon"></span>
-        </button>
+    <header>
+      <div class="wrapper">
+        <div class="header">
+          <div class="header__logo">
+            <img src="img/header/logo.svg" class="logo__image" alt="Видеосервис" />
+            <h1 class="logo__name">Видеосервис</h1>
+          </div>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/cv.html">Резюме</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contacts.html">Контакты</a>
-            </li>
-          </ul>
-          <button class="button my-2 my-sm-0" type="button">Войти / Регистрация</button>
+          <form class="header__search" action="" method="get">
+            <input class="search__input" name="search" id="search" placeholder="Поиск..." type="search" />
+            <button class="search__button" type="submit">Найти</button>
+          </form>
+
+          <div class="header__login">
+            <span class="login__user" id="user-name"></span>
+            <button id="login-button" class="button">Войти</button>
+            <button id="button-logout" class="button button__logout button__hidden">Выйти</button>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <main id="swup" class="transition-fade">
-      <section class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="main">
-              <div class="main__text animate__animated animate__fadeInLeft">
-                <p class="text__item">
-                  Михаил Храмцов
-                </p>
-                <h1 class="text__item">
-                  Frontend developer / Верстальщик
-                </h1>
-              </div>
-              <div class="main__image animate__animated animate__fadeInRight">
-                <div class="image"></div>
-              </div>
-            </div>
+    <section id="modal-login" class="modal__login">
+      <div class="login">
+        <form class="login__form" id="login-form">
+          <h2 class="login__header">Вход</h2>
+          <div class="login__item">
+            <input class="login__input" placeholder="Логин" type="text" name="text" id="login-text" required />
           </div>
-        </div>
-      </section>
+          <div class="login__item">
+            <input class="login__input" placeholder="Пароль" type="password" name="password" id="login-password" required />
+          </div>
+          <div class="login__item">
+            <label class="checkbox"
+              ><input class="checkbox__input" id="checkbox" type="checkbox" name="checkbox" />
+              <span class="checkbox__fake"></span>
+              <span class="checkbox__agreement"> Запомнить</span>
+            </label>
+          </div>
+          <button id="login-check" class="button login__button">Войти</button>
+        </form>
+      </div>
+    </section>
 
-      <section class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="facts" id="facts ">
-              <h2 class="header">
-                Интересные факты
-                <span class="slider__arrow"></span>
-              </h2>
-            </div>
-          </div>
+    <main class="tabs">
+      <div class="wrapper">
+        <div class="tabs__nav tabs-nav">
+          <button class="is-active nav__item" data-tab-name="index-movies">Фильмы</button>
+          <button class="nav__item" data-tab-name="index-channels">Телеканалы</button>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="facts__slider">
-              <div class="slider__item">
-                <img class="slider__image" data-lazy="./img/main/1.jpeg" alt="Опыт работы" />
-                <div class="description">
-                  <h3>1 год</h3>
-                  <p>В верстке и Frontend</p>
+      </div>
+      <div class="tabs__content">
+        <div class="tab is-active index-movies">
+          <section>
+            <div class="wrapper">
+              <article class="movie__new">
+                <h2 class="new__header">🔥 Новинки</h2>
+                <div class="new__wrapper">
+                  <div class="movie__card">
+                    <div class="card__wrapper">
+                      <img class="card__image" src="img/movie-item/cartoon.jpg" alt="Мульт в кино" />
+                      <div class="card__overlay">
+                        <p>
+                          В новом выпуске ми-ми-мишки изобретут машину сна, а Дракоша Тоша научит завязывать шнурки. Также зрители
+                          увидят новые серии мультфильмов «Четверо в кубе», «Лео и Тиг» и совершенно новый мультсериал «Снежная
+                          королева: Хранители чудес».
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="card__name">Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+                  </div>
+                  <div class="movie__card">
+                    <div class="card__wrapper">
+                      <img class="card__image" src="img/movie-item/batman.jpg" alt="Бэтмен" />
+                      <div class="card__overlay">
+                        <p>
+                          «Бэтмен» (англ. The Batman) — предстоящий американский супергеройский фильм, основанный на одноимённых
+                          комиксах издательства DC Comics. Картина будет выпущена компанией Warner Bros. и будет перезагрузкой
+                          всех фильмов о Бэтмене.
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="card__name">Новый Бэтмен</h3>
+                  </div>
+                  <div class="movie__card">
+                    <div class="card__wrapper">
+                      <img class="card__image" src="img/movie-item/once-in-hollywood.jpg" alt="Однажды в Голливуде" />
+                      <div class="card__overlay">
+                        <p>
+                          Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века».
+                          Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся
+                          мире киноиндустрии.
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="card__name">Однажды... в Голливуде</h3>
+                  </div>
+                  <div class="movie__card">
+                    <div class="card__wrapper">
+                      <img class="card__image" src="img/movie-item/strippers.jpg" alt="Стриптизёрши" />
+                      <div class="card__overlay">
+                        <p>
+                          Они — яркие, сексуальные и очень амбициозные. Они — танцовщицы элитного стриптиз-клуба, клиенты которого
+                          — известные финансисты с Уолл-Стрит. Но когда банковский кризис в одночасье превращает накопления
+                          девушек в пыль, подруги по несчастью жаждут отомстить.
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="card__name">Стриптизёрши</h3>
+                  </div>
                 </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__image" data-lazy="./img/main/2.jpeg" alt="Знание языков" />
-                <div class="description">
-                  <h3>3 языка</h3>
-                  <p>Английский, немецкий, русский</p>
+              </article>
+
+              <article class="genre">
+                <h2 class="genre__header">Жанры</h2>
+                <div class="genre__wrapper">
+                  <div class="genre__item">
+                    <span class="item__emoji">😁</span>
+                    <h3 class="item__name">Комедии</h3>
+                  </div>
+                  <div class="genre__item">
+                    <span class="item__emoji">😭</span>
+                    <h3 class="item__name">Драмы</h3>
+                  </div>
+                  <div class="genre__item">
+                    <span class="item__emoji">👽</span>
+                    <h3 class="item__name">Фантастика</h3>
+                  </div>
+                  <div class="genre__item">
+                    <span class="item__emoji">👻</span>
+                    <h3 class="item__name">Ужасы</h3>
+                  </div>
                 </div>
-              </div>
-              <div class="slider__item">
-                <img class="slider__image" data-lazy="./img/main/3.jpeg" alt="Международный опыт" />
-                <div class="description">
-                  <h3>~1 год</h3>
-                  <p>Интернационального опыта работы в Германии</p>
-                </div>
-              </div>
+              </article>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
+        <div class="tab index-channels">
+          <section>
+            <div class="wrapper">
+              <article class="channels">
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/first.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">Первый канал</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">Новости(с субтитрами)</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">Давай поженимся</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Другие новости</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/2x2.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">2x2</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">МУЛЬТ ТВ. Сезон 4, 7 серия</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">БУРДАШЕВ. Сезон 1, 20 серия</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/rbc.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">РБК</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">ДЕНЬ. Главные темы</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Главные новости</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/amedia.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">AMEDIA PREMIUM</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">Клиент всегда мёртв</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">Голодные игры: Сойка-пересмешница. Часть I</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Секс в большом городе</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/first.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">Первый канал</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">Новости(с субтитрами)</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">Давай поженимся</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Другие новости</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/2x2.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">2x2</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">МУЛЬТ ТВ. Сезон 4, 7 серия</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">БУРДАШЕВ. Сезон 1, 20 серия</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/rbc.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">РБК</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">ДЕНЬ. Главные темы</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Главные новости</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel__logo">
+                    <img src="img/index-channels/amedia.svg" alt="Первый канал" />
+                  </div>
+                  <div class="channel__schedule">
+                    <h3 class="channel__name">AMEDIA PREMIUM</h3>
+                    <ul class="schedule">
+                      <li class="schedule__item">
+                        <div class="schedule__time">13:00</div>
+                        <div class="schedule__broadcast-name">Клиент всегда мёртв</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">14:00</div>
+                        <div class="schedule__broadcast-name">Голодные игры: Сойка-пересмешница. Часть I</div>
+                      </li>
+                      <li class="schedule__item">
+                        <div class="schedule__time">15:00</div>
+                        <div class="schedule__broadcast-name">Секс в большом городе</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <div class="footer__contacts">
-              <p>Есть идея?</p>
-              <span>Позвоните: <a class="footer__tel" href="tel:+7(999)587-67-67">+7 (999) 587-67-67</a></span>
-              <span>Напишите: <a class="footer__mail" href="mailto:mikhail@hr13.ru"> mikhail@hr13.ru</a></span>
-            </div>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__wrapper">
+          <div class="footer__logo">
+            <img src="img/footer/footer.svg" alt="Логотип" />
+          </div>
+          <div class="footer__contacts">
+            <span class="contacts__address"
+              >426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</span
+            >
+            <a class="contacts__phone" href="tel:+73412938861">+7 (3412) 93-88-61, 43-29-29</a>
+            <a class="contacts__website" href="https://htc-cs.ru" target="_blank">htc-cs.ru</a>
           </div>
         </div>
       </div>
     </footer>
-
     <script src="./js/scripts.min.js"></script>
   </body>
 </html>
