@@ -390,6 +390,9 @@ body {
         margin-bottom: 32px;
         font-size: 48px;
         line-height: 57px;
+        width: 48px;
+        height: 48px;
+        background-size: 100%;
       }
 
       .item__name {
@@ -402,18 +405,31 @@ body {
       &:first-child {
         background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
         box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+        .item__emoji {
+          background: url("../img/genre/emoji-smile.svg") no-repeat center;
+          background-size: 100%;
+        }
       }
 
       &:nth-child(2) {
         background: linear-gradient(127.83deg, #f2994a 8.44%, #eb5757 91.36%);
         opacity: 0.8;
         box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+        .item__emoji {
+          background: url("../img/genre/emoji-cry.svg") no-repeat center;
+        }
       }
 
       &:nth-child(3) {
         background: linear-gradient(127.83deg, #56ccf2 8.44%, #2f80ed 91.36%);
         opacity: 0.8;
         box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+        .item__emoji {
+          background: url("../img/genre/emoji-alien.svg") no-repeat center;
+        }
       }
 
       &:last-child {
@@ -421,6 +437,10 @@ body {
         background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
         opacity: 0.8;
         box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+
+        .item__emoji {
+          background: url("../img/genre/emoji-ghost.svg") no-repeat center;
+        }
       }
 
       &:hover {
@@ -459,6 +479,7 @@ body {
     padding-top: 22px;
     padding-bottom: 19px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     background: #f2f2f2;
     border-radius: 8px;
@@ -510,6 +531,7 @@ body {
   }
 }
 
+
 //footer
 
 .footer {
@@ -551,6 +573,7 @@ body {
     }
   }
 }
+
 
 @media (max-width: 767.98px) {
   body {
@@ -619,8 +642,6 @@ body {
           font-size: 20px;
           text-align: left;
         }
-
-        &:last-child {}
       }
     }
   }
@@ -660,13 +681,73 @@ body {
   }
 
   .channels {
-    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 72px;
 
-    .channel__schedule {
-      width: 66.666%;
+    &::-webkit-scrollbar {
+      background: #f2f2f2;
+      width: 8px;
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background: #bdbdbd;
+      border: 2px solid #f2f2f2;
+      border-radius: 4px;
+    }
+
+    .channel {
+      padding: 22px 20px 19px;
+      width: 100%;
+      flex-direction: column;
+
+      .channel__logo {
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .channel__schedule {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+
+        .channel__name {
+          text-align: center;
+          margin-bottom: 8px;
+        }
+
+        .schedule {
+          .schedule__item {
+            display: flex;
+            margin-bottom: 6px;
+
+            &:first-child {
+              color: #e5261e;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .schedule__time,
+            .schedule__broadcast-name {
+              display: inline-block;
+            }
+
+            .schedule__time {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+
+
 
 @media (max-width: 991.98px) {
   .logo__name {
