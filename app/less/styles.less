@@ -620,8 +620,11 @@ body {
 
       .contacts__phone {
         display: inline-block;
-        color: #333333;
         margin-bottom: 10px;
+
+        .phone {
+          color: #333333;
+        }
       }
 
       .contacts__website {
@@ -648,7 +651,6 @@ body {
 
   .header {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     padding-top: 33px;
     margin-bottom: 32px;
@@ -676,6 +678,7 @@ body {
 
     .header__login {
       display: flex;
+      justify-content: flex-end;
       align-items: center;
 
       .login__user {
