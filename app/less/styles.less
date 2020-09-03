@@ -31,6 +31,26 @@ body {
   }
 }
 
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+
 .disable {
   display: none;
 }
@@ -612,7 +632,7 @@ body {
     align-items: center;
 
     .footer__logo {
-      margin-right: 20px;
+      margin-right: 40px;
     }
 
     .footer__contacts {
@@ -820,6 +840,10 @@ body {
         }
       }
     }
+  }
+
+  .footer__logo {
+    margin-right: 20px;
   }
 }
 
