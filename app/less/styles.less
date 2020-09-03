@@ -215,7 +215,7 @@ body {
         transition: opacity 0.2s;
       }
 
-      .checkbox__input:checked + .checkbox__fake::before {
+      .checkbox__input:checked+.checkbox__fake::before {
         opacity: 1;
       }
     }
@@ -280,13 +280,15 @@ body {
   margin-bottom: 32px;
 
   .new__header {
-    margin-bottom: 16px;
+    margin: 0 10% 16px;
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
   }
 
   .new__wrapper {
+    max-width: 1440px;
+    margin: 0 10%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -337,7 +339,7 @@ body {
         opacity: 1;
       }
 
-      .card__overlay:hover > p {
+      .card__overlay:hover>p {
         transform: translateY(0);
       }
 
@@ -589,10 +591,16 @@ body {
   }
 
   .movie__new {
-    padding-left: 20px;
     margin-bottom: 16px;
 
+    .new__header {
+      margin: 0 0 16px 5%;
+    }
+
     .new__wrapper {
+      max-width: 1440px;
+      padding: 0 5%;
+      margin-left: 0;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -601,16 +609,18 @@ body {
       overflow-x: scroll;
 
       .movie__card {
-        padding-right: 10px;
         min-width: 300px;
         max-width: 100%;
-        margin-right: 20px;
+        padding-right: 15px;
+        margin-right: 0;
         display: inline-block;
 
         .card__name {
           font-size: 20px;
           text-align: left;
         }
+
+        &:last-child {}
       }
     }
   }
