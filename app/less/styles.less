@@ -714,11 +714,16 @@ input::-webkit-search-results-decoration {
     margin-bottom: 16px;
 
     .new__header {
-      margin: 0 0 16px calc(5%+30px);
+      margin: 0 auto 16px;
+      padding-left: 50px;
+
+      &::before {
+        margin-left: 20px;
+      }
     }
 
     .new__wrapper {
-      max-width: 1440px;
+      max-width: 1180px;
       padding: 0 5%;
       margin-left: 0;
       display: flex;
