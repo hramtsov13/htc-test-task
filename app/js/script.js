@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 checkBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (login.value === "Константин" && password.value === "777") {
+  if (login.value === "Константин К." && password.value === "777") {
     if (checkbox.checked) {
       localStorage.setItem("user", login.value);
     } else {
